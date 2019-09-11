@@ -13,8 +13,13 @@ const Create = props => {
 
     const handleSubmit = event => {
         event.preventDefault();
-        props.setTeamMembers([newTeamMember, ...props.teamMembers]);
-        resetForm();
+        if(!newTeamMember.name || !newTeamMember.email || !newTeamMember.role){
+            alert("Please fill out all fields!");
+        } else{
+            props.setTeamMembers([newTeamMember, ...props.teamMembers]);
+            resetForm();  
+        }
+        
     };
 
     const resetForm = () => {
@@ -24,7 +29,7 @@ const Create = props => {
     return (
         
         <form className="form" onSubmit={handleSubmit}>
-            <h2 className="formTitle">Add your info to team list</h2>
+            <h2 className="formTitle">Enter your information</h2>
             <input className="input"
              type="text"
              name="name"
@@ -44,7 +49,7 @@ const Create = props => {
             <input className="input"
              type="text"
              name="role"
-             placeholder="Role"
+             placeholder="Team Role"
              onChange={handleChange}
              value={newTeamMember.role}
              /> 
