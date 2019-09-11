@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from 'reactstrap';
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Form = props => {
     const initial = { name: "", email: "", role: "" }
@@ -63,12 +63,12 @@ const Form = props => {
              /> 
              <br/>
             <Button className="button" color="info" type="submit">Join</Button>
-            <NavLink to="/member-list">
+            <Link to="/member-list">
             <Button className="button" color="info" >List of Team Members</Button>
-            </NavLink>
-            <NavLink to="/">
+            </Link>
+            <Link to="/">
             <Button className="button" color="info">Home</Button>
-            </NavLink>
+            </Link>
         </form>
         
     );

@@ -15,6 +15,9 @@ function MemberList(props) {
             <Link to="/">
             <Button className="button" color="info">Home</Button>
             </Link>
+            <Link to={`/add-member`}>
+            <Button className="button" color="info">Add New Member</Button >
+            </Link>
         {props.teamMembers.map((teamMember, index) => (
             <div className="p-3 bg-info my-2 rounded" key={index}>
                 <Wrapper>
