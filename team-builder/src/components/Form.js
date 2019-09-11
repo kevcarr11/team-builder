@@ -22,9 +22,8 @@ const Form = props => {
             alert("Please fill out all fields!");
         } else{
             props.setTeamMembers([newTeamMember, ...props.teamMembers]);
+            alert("Thanks for joining! Go checkout the List of Team Members! ") 
             resetForm();
-            alert("Thanks for joining! Checkout the Team Members List") 
-
         }
         
     };

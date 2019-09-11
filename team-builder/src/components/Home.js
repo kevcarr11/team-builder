@@ -8,7 +8,7 @@ function Home() {
     return (
         <div>
             <h1 className="text-info">Welcome to the Members list!</h1>
-            <h3 className="text-info">Please feel free to join!</h3>
+            <h3 className="text-info">Please feel free to join, or checkout the current list of team members!</h3>
             <Link to={`/member-list`}>
             <Button className="button" color="info">Members</Button >
             </Link>
