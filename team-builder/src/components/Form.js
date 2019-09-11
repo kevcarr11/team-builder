@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { Button } from 'reactstrap';
+
 
 const Create = props => {
     const initial = { name: "", email: "", role: "" }
@@ -29,7 +31,7 @@ const Create = props => {
     return (
         
         <form className="form" onSubmit={handleSubmit}>
-            <h2 className="formTitle">Enter your information</h2>
+            <h2 className="text-info">Enter your information</h2>
             <input className="input"
              type="text"
              name="name"
@@ -55,7 +57,7 @@ const Create = props => {
              /> 
              <br/>
 
-            <button className="button" type="submit">Submit</button>
+            <Button className="button" color="info" type="submit">Submit</Button>
         </form>
     );
 };

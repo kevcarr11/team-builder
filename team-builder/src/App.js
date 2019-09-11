@@ -4,6 +4,7 @@ import Create from "./components/Form";
 import './App.css';
 
 function App() {
+  const [memberToEdit, setMemberToEdit] = useState('')
   const [teamMembers, setTeamMembers] = useState([
     {
         name: "Kevin Carr",
@@ -16,8 +17,11 @@ function App() {
     <div className="App" >
       
       <Create teamMembers={teamMembers} setTeamMembers={setTeamMembers} />
-      <h1>List of Team Members</h1>
-      <Team teamMembers ={teamMembers} />
+      <h1 className="text-info">List of Team Members</h1>
+      <Team 
+      teamMembers = {teamMembers} 
+      memberToEdit = {memberToEdit}
+      setMemberToEdit = {setMemberToEdit} />
     </div>
   );
 }
