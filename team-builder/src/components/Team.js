@@ -12,13 +12,13 @@ function Team(props) {
         {props.teamMembers.map((teamMember, index) => (
             <div className="p-3 bg-info my-2 rounded" key={index}>
                 <Wrapper>
-                <Toast>
-                    <ToastHeader>{teamMember.name}</ToastHeader>
-                    <ToastBody>
-                    <p>Role: {teamMember.role}</p>
-                    <p>Email: {teamMember.email}</p>
-                    </ToastBody>
-                </Toast>
+                    <Toast>
+                        <ToastHeader>{teamMember.name}</ToastHeader>
+                        <ToastBody>
+                        <strong>Team Role:</strong><p>{teamMember.role}</p>
+                        <strong>Email:</strong><p>{teamMember.email}</p>
+                        </ToastBody>
+                    </Toast>
                 </Wrapper>
             </div>
         ))}
