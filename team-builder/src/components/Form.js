@@ -22,7 +22,9 @@ const Form = props => {
             alert("Please fill out all fields!");
         } else{
             props.setTeamMembers([newTeamMember, ...props.teamMembers]);
-            resetForm();  
+            resetForm();
+            alert("Thanks for joining! Checkout the Team Members List") 
+
         }
         
     };
@@ -60,9 +62,12 @@ const Form = props => {
              value={newTeamMember.role}
              /> 
              <br/>
-            <Button className="button" color="info" type="submit">Submit</Button>
+            <Button className="button" color="info" type="submit">Join</Button>
             <NavLink to="/member-list">
-            <Button className="button" color="info" >See Member List</Button>
+            <Button className="button" color="info" >List of Team Members</Button>
+            </NavLink>
+            <NavLink to="/">
+            <Button className="button" color="info">Home</Button>
             </NavLink>
         </form>
         

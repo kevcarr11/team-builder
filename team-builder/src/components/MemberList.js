@@ -12,7 +12,7 @@ function MemberList(props) {
     return (
         <>
         <h1 className="text-info" >List of Team Members</h1>
-        <Link to="/">
+            <Link to="/">
             <Button className="button" color="info">Home</Button>
             </Link>
         {props.teamMembers.map((teamMember, index) => (
