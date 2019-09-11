@@ -1,10 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button } from 'reactstrap';
+import { NavLink } from "react-router-dom";
 
-
-const Create = props => {
+const Form = props => {
     const initial = { name: "", email: "", role: "" }
     const [newTeamMember ,setNewTeamMember] = useState(initial);
+    useEffect(() => {
+        props.setMemberToEdit(props.memberToEdit)
+    }, [props]);
 
     const handleChange = event => {
         setNewTeamMember({
@@ -30,6 +33,7 @@ const Create = props => {
 
     return (
         
+       
         <form className="form" onSubmit={handleSubmit}>
             <h2 className="text-info">Enter your information</h2>
             <input className="input"
@@ -56,10 +60,13 @@ const Create = props => {
              value={newTeamMember.role}
              /> 
              <br/>
-
             <Button className="button" color="info" type="submit">Submit</Button>
+            <NavLink to="/member-list">
+            <Button className="button" color="info" >See Member List</Button>
+            </NavLink>
         </form>
+        
     );
 };
 
-export default Create;
+export default Form;
