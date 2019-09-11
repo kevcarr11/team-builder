@@ -23,7 +23,7 @@ const Create = props => {
 
     return (
         
-        <form onSubmit={handleSubmit}>
+        <form className="form" onSubmit={handleSubmit}>
             <h2 className="formTitle">Add your info to team list</h2>
             <input className="input"
              type="text"
@@ -50,7 +50,7 @@ const Create = props => {
              /> 
              <br/>
 
-            <button type="submit">Submit</button>
+            <button className="button" type="submit">Submit</button>
         </form>
     );
 };
